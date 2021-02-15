@@ -280,7 +280,7 @@ def get_bounding_box_inds(dat):
     ymin,ymax = nzy.min(),nzy.max()
     zmin,zmax = nzz.min(),nzz.max()
 
-    minmaxarr = np.array([[xmin,xmax],[ymin,ymax],[zmin,xmax]])
+    minmaxarr = np.array([[xmin,xmax],[ymin,ymax],[zmin,zmax]])
 
     return minmaxarr
 
