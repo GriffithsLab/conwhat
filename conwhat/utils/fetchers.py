@@ -79,7 +79,7 @@ def fetch_conwhat_atlas(atlas_name,dataset_dir,resume=True, verbose=1,
         os.system(cmd)
 
     print(f'\n\ndownloading data_file {data_file}...')
-    cmd = f'wget {url}'
+    cmd = f'wget {url} --no-check-certificate'
     print(f'{cmd}')
     os.system(cmd)
 
