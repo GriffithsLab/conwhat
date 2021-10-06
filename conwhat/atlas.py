@@ -1,5 +1,5 @@
 """
-Atlas class definitions 
+Atlas class definitions
 """
 
 # Author: John Griffiths
@@ -14,11 +14,11 @@ from nilearn.image import index_img
 
 from nilearn.plotting import plot_glass_brain
 
-from utils.readers import (load_connectivity,load_vol_file_mappings,load_vol_bboxes,
+from .utils.readers import (load_connectivity,load_vol_file_mappings,load_vol_bboxes,
                            load_stream_file_mappings,load_stream_bboxes,
                            make_nx_graph,dpy_to_trk)
 
-from utils.stats import (compute_vol_hit_stats,compute_vol_scalar_stats,
+from .utils.stats import (compute_vol_hit_stats,compute_vol_scalar_stats,
                          compute_streams_in_roi,#compute_stream_hit_stats,compute_stream_scalar_stats,
                          hit_stats_to_nx)
 
@@ -38,7 +38,7 @@ class _Atlas(): # object):
 
   def __init__(self):
 
-    print 'blah'
+    print('blah')
 
 
 class _VolAtlas(_Atlas):
@@ -55,40 +55,41 @@ class _VolAtlas(_Atlas):
     #if atlas_dir:
     #  self.vfms,self.atlas_dir = load_vol_file_mappings(atlas_dir=atlas_dir)
     #  self.bbox = load_vol_bboxes(atlas_dir=atlas_dir)
-    #else: 
-    #  self.vfms,self.atlas_dir = load_vol_file_mappings(atlas_name=atlas_name) 
+    #else:
+    #  self.vfms,self.atlas_dir = load_vol_file_mappings(atlas_name=atlas_name)
     #  self.bbox = load_vol_bboxes(atlas_name=atlas_name)
     self.vfms,self.atlas_dir = load_vol_file_mappings(atlas_name=atlas_name,atlas_dir=atlas_dir)
     self.bbox = load_vol_bboxes(atlas_name=atlas_name,atlas_dir=atlas_dir)
 
 
-  def get_vol_from_vfm(self,idx):		
-    """ 		
-    Convenience method to return nifti volume for an entry in the vfm table		
-    """		
- 	
-    nii_file = self.vfms.ix[idx]['nii_file']		
-    volnum = self.vfms.ix[idx]['4dvolind']		
-    		
-    if not os.path.isfile(nii_file):  		
-      candidate = os.path.join(self.atlas_dir,nii_file)		
-      if os.path.isfile(candidate): 		
-        nii_file = candidate		
-      else: 		
-          Exception('File not found')		
-    		
-    if os.path.isfile(nii_file):		
-      if (np.isnan(volnum) or volnum == 'nan'):		
-        print 'getting atlas entry %s: image file %s'  %(idx,nii_file)		
-        img = nib.load(nii_file)		
-      else:		
-        print 'getting atlas entry %s: volume %s from image file %s'  %(idx,volnum,nii_file)		
-        img = index_img(nii_file,volnum)		
- 		
+  def get_vol_from_vfm(self,idx):
+    """
+    Convenience method to return nifti volume for an entry in the vfm table
+    """
+
+    nii_file = self.vfms.iloc[idx]['nii_file']
+    volnum = self.vfms.iloc[idx]['4dvolind']
+
+    if not os.path.isfile(nii_file):
+      candidate = os.path.join(self.atlas_dir,nii_file)
+      if os.path.isfile(candidate):
+        nii_file = candidate
+      else:
+          Exception('File not found')
+
+    if os.path.isfile(nii_file):
+      if (np.isnan(volnum) or volnum == 'nan'):
+        print(f'getting atlas entry {idx}: image file {nii_file}')
+        img = nib.load(nii_file)
+      else:
+        print(f'getting atlas entry {idx}:'+\
+            f' volume {volnum} from image file {nii_file}')
+        img = index_img(nii_file, volnum)
+
     return img
 
 
-  
+
 
   def compute_hit_stats(self,roi,idxs,n_jobs=1,run_type='simple',joblib_cache_dir='/tmp'):
     """
@@ -111,7 +112,7 @@ class _VolAtlas(_Atlas):
 
   def compute_scalar_stats(self,params,name):
     """
-    Compute scalar stats and store inside this 
+    Compute scalar stats and store inside this
     object under 'name'
     """
 
@@ -124,10 +125,10 @@ class _VolAtlas(_Atlas):
 
   def get_bbox_dimsizes(self):
     """
-    Return lists of lengths between bounding box minima 
+    Return lists of lengths between bounding box minima
     and maxima
 
-    Usage: 
+    Usage:
 
     xdimsize,ydimsize,zdimsize = cw.get_bbox_dimsizes()
     """
@@ -161,7 +162,7 @@ class VolTractAtlas(_VolAtlas):
     Compute hit stats and store inside this object
       under 'name'
     """
-  
+
     df_hit_stats = compute_vol_hit_stats(roi,self.vfms,self.bbox,
                                       idxs,n_jobs=n_jobs,
                                       atlas_name=self.atlas_name,
@@ -191,7 +192,7 @@ class VolConnAtlas(_VolAtlas):
     # Load connectivity info
 
     ws,rls,tls,rxyzs,rnii,ctx,hs,rmfslh,rmfsrh = load_connectivity(atlas_name=atlas_name,atlas_dir=atlas_dir)
-    
+
     self.__weights = ws
     self.region_labels = rls
 
@@ -203,7 +204,7 @@ class VolConnAtlas(_VolAtlas):
     if rmfslh is not None: self.region_mapping_fsav_lh = rmfslh
     if rmfsrh is not None: self.region_mapping_fsav_rh = rmfsrh
 
- 
+
     # Compile node and connectivity info into a networkx graph
     self.Gnx = make_nx_graph(self.vfms,self.bbox,ws,rls,hs,ctx)
 
@@ -235,47 +236,47 @@ class VolConnAtlas(_VolAtlas):
 
   def get_rois_from_idx(self,idx):
     """
-    Note: assumes that 'name' column in vfms is 
+    Note: assumes that 'name' column in vfms is
           of the form 'roi1_to_roi2'
     """
     roi1,roi2 = self.vfms.ix[idx]['name'].split('_to_')
     roi1 = int(roi1)
     roi2 = int(roi2)
 
-    return roi1,roi2 
+    return roi1,roi2
 
- 
+
 
   def get_idx_from_rois(self,roi1,roi2):
     g = self.Gnx[int(roi1)][int(roi2)]
     idx = g['idx']
     return idx
- 
+
 
   def get_vol_from_rois(self,roi1,roi2):
 
     idx = self.get_idx_from_rois(roi1,roi2)
-   
+
     img = self.get_vol_from_vfm(idx)
 
     """
     vfm = self.vfms.ix[idx]
     nii_file = vfm['nii_file']
     volnum = vfm['4dvolind']
-    
+
     if not os.path.isfile(nii_file):
       candidate = os.path.join(self.atlas_dir,nii_file)
       if os.path.isfile(candidate):
         nii_file = candidate
-      else: 
+      else:
         Exception('file not found')
-    
+
     if os.path.isfile(nii_file):
       if (np.isnan(volnum) or volnum == 'nan'):
         img = nib.load(nii_file)
       else:
         img = index_img(nii_file,volnum)
-   
+
     return img
     """
 
@@ -284,18 +285,18 @@ class VolConnAtlas(_VolAtlas):
 
   def modify_connectome(self, name='mc1',function=''):
     """
-    Modify canonical connectome using hit or scalar 
+    Modify canonical connectome using hit or scalar
     stats, and store in this obj
     """
 
     res = modify_vol_connectome()
 
     self.modcons[name] = res
-   
+
 
 
   def plot_network(self):
-   
+
     plot_network()
 
 
@@ -309,8 +310,8 @@ class VolConnAtlas(_VolAtlas):
     """
     Return nifti image with just this roi
     """
-    
-    roinum = int(roinum) 
+
+    roinum = int(roinum)
 
     allrois_img = self.region_nii
     allrois_dat = allrois_img.get_data()
@@ -325,12 +326,12 @@ class VolConnAtlas(_VolAtlas):
   def nl_plot_connvol(self,idx=None,roi1=None,roi2=None,add_rois=True,
                       nl_params = dict(threshold=0.1,cmap='Reds')):
 
-    if idx: 
+    if idx:
       cnxn_img = self.get_vol_from_vfm(idx)
       roi1,roi2 = self.get_rois_from_idx(idx)
-    else:   
+    else:
       cnxn_img = self.get_vol_from_rois(roi1,roi2)
- 
+
     """
     if (roi1 != None) and (roi2 != None):
 
@@ -379,11 +380,11 @@ class VolConnAtlas(_VolAtlas):
 
 
 
-class _StreamAtlas(_Atlas):   
+class _StreamAtlas(_Atlas):
   """
   Streamlinetric atlas base class
   """
-    
+
   def __init__(self,atlas_name=None,atlas_dir=None):
 
     self.atlas_name = atlas_name
@@ -398,7 +399,7 @@ class _StreamAtlas(_Atlas):
 
   def write_subset_to_trk(self,ref_file,outfile,stream_inds='all'):
 
-    print 'writing streams to trk file: %s' %outfile
+    print(f'writing streams to trk file: {outfile}')
     dpy_to_trk(self.dpy_file,ref_file,outfile,inds=stream_inds)
 
 
@@ -408,7 +409,7 @@ class StreamTractAtlas(_StreamAtlas):
   """
   Streamlinetric tract-based atlas base class
   """
-  
+
   def __init__(self,atlas_name=None,atlas_dir=None):
 
     _StreamAtlas.__init__(self,atlas_name=atlas_name,atlas_dir=atlas_dir)
@@ -420,7 +421,7 @@ class StreamConnAtlas(_StreamAtlas):
   """
 
   def __init__(self,atlas_name=None,atlas_dir=None):
-    # A lot of this is shared between StreamConn atlas and VolConn atlas. 
+    # A lot of this is shared between StreamConn atlas and VolConn atlas.
     # modify...
 
     _StreamAtlas.__init__(self,atlas_name=atlas_name,atlas_dir=atlas_dir)
@@ -448,7 +449,7 @@ class StreamConnAtlas(_StreamAtlas):
 
   def get_rois_from_idx(self,idx):
     """
-    Note: assumes that 'name' column in vfms is 
+    Note: assumes that 'name' column in vfms is
           of the form 'roi1_to_roi2'
     """
     roi1,roi2 = self.sfms.ix[idx]['name'].split('_to_')
@@ -488,21 +489,21 @@ class StreamConnAtlas(_StreamAtlas):
 
   def modify_connectome(self, name='mc1',function=''):
     """
-    Modify canonical connectome using hit or scalar 
+    Modify canonical connectome using hit or scalar
     stats, and store in this obj
     """
 
     res = modify_stream_connectome()
 
     self.modcons[name] = res
-   
+
 
 
   def write_cnxn_to_trk(self,ref_file,outfile,idx=None,roi1=None,roi2=None):
 
-    if not idx: 
+    if not idx:
       idx = self.get_idx_from_rois(roi1,roi2)
-       
+
     idxlist = self.sfms.ix[idx]['idxlist']
 
     self.write_subset_to_trk(ref_file,outfile,stream_inds=idxlist)
@@ -510,7 +511,7 @@ class StreamConnAtlas(_StreamAtlas):
 
 
   def plot_network(self):
-   
+
     plot_network()
 
 
