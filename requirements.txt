@@ -3,9 +3,12 @@ pandas
 nibabel
 nilearn
 dipy
+nipy
+indexed_gzip
 joblib
 matplotlib
 sphinx>=1.5.1
 nbsphinx
+jupyter
 ipykernel
 jupyter-alabaster-theme

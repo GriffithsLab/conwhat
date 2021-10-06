@@ -9,7 +9,7 @@ setup(name='conwhat', #version=versioneer.get_version(),
       keywords='white matter, tractography, MRI, DTI, diffusion, python',
       author='John David Griffiths',
       author_email='j.davidgriffiths@gmail.com',
-      url='https://github.com/JohnGriffiths/conwhat',
+      url='https://github.com/GriffithsLab/conwhat',
       packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]), 
       install_requires=['numpy',  'setuptools'],
       classifiers=[
@@ -21,8 +21,7 @@ setup(name='conwhat', #version=versioneer.get_version(),
           'Operating System :: POSIX',
           'Operating System :: Unix',
           'Operating System :: MacOS',
-          'Programming Language :: Python :: 2.7',
-          'Programming Language :: Python :: 3.6',
+          'Programming Language :: Python :: 3.9',
       ],
       entry_points={
           "console_scripts": [
