@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ontology &amp; Representation &mdash; ConWhAt 0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/debug.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ConWhAt Atlases" href="conwhat_atlases.html" />
+    <link rel="prev" title="Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ConWhAt
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">About ConWhAt</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ontology &amp; Representation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ontology">Ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#representation">Representation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conwhat_atlases.html">ConWhAt Atlases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-latest-github-master-source">Using latest github master source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-pypi">Using pypi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-with-docker">Using with docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/eg01_downloading_conwhat_atlases.html">Downloading ConWhAt Atlases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/eg01_downloading_conwhat_atlases.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/eg01_downloading_conwhat_atlases.html#download-the-atlases-and-take-a-look">Download the atlases and take a look</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/eg02_exploring_conwhat_atlases.html">Exploring the ConWhAt Atlases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/eg02_exploring_conwhat_atlases.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/eg02_exploring_conwhat_atlases.html#load-and-explore">Load and explore</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/eg03_defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/eg03_defining_a_synthetic_lesion.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/eg04_assessing_the_network_impact_of_lesions.html">Assessing the network impact of a lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/eg04_assessing_the_network_impact_of_lesions.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/eg04_assessing_the_network_impact_of_lesions.html#grab-lesion">Grab lesion</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ConWhAt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Ontology &amp; Representation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ontology-representation">
+<h1>Ontology &amp; Representation<a class="headerlink" href="#ontology-representation" title="Permalink to this headline">¶</a></h1>
+<p>Classical and modern schemas for defining and characterizing neuroanatomical structures in white matter tissue can be categorized along two main dimensions <em>Ontology</em> and <em>Representation</em>. Each of these has two main flavours: tract-based/connectivity-based, and image-based/streamline-based.</p>
+<div class="section" id="ontology">
+<h2>Ontology<a class="headerlink" href="#ontology" title="Permalink to this headline">¶</a></h2>
+<p>Conventional approaches to atlasing white matter structures follow a <em>tract-based</em> ontology: they assign locations in stereotaxic space to a relatively small number of gross white matter tracts from the classical neuroanatomy literature.</p>
+<p>This has been an extremely successful program of research, particularly in relation to post-mortem dissections and MR image or tractography streamline segmentation methodologies, as it draws on some of the brain’s most salient and consistent macroscopic structural features.</p>
+<p>Unfortunately, however, tract-based ontologies aren’t particularly well-suited to network-based descriptions of brain organization. The reason for this is that identifying that a given spatial location falls within one or other canonical white matter tract (e.g. the inferior longitudinal fasciculus) doesn’t in itself say very much about the specific grey matter connectivity of that location. Although they consist of many hundreds of thousands of structural connections (axons), the white matter tracts per se are not descriptions of connectivity, but rather of large 3D geometric structures that can be located relative to certain anatomical landmarks.</p>
+<p>The second flavour of white matter ontology, which is becoming increasingly prominent in modern modern neuroscientific research, is a <em>connectivity-based</em> one. The idea here is that rather than following the classical anatomical tract nomenclature, to label white matter voxels according to the grey matter regions that their constituent fibers interconnect. Combining this with the modern macro-connectomics tractography approach (whole-brain tractography, segmented using region pairs from a given grey matter parcellation), gives the <em>connectome-based white matter atlas</em> methodology,  which is what ConWhAt (and other earlier tools, notably NeMo) is designed to support.</p>
+<p>The benefit of this approach is that a scientist/clinician/citizen can take a set of (standard space) coordinates, or a nifti-format ROI mask such as a binary lesion map, and straightforwardly query which grey matter region pairs (i.e. connectome-edges) have fibers passing through those locations.</p>
+<p>That information can then be used together with the used parcellation’s <em>canonical connectome</em> (normative group-averaged connectivity matrix), to obtain a lesion-modified structural (macro) connectome. This can be done very quickly with zero tractography data or analysis required, and as little as a list of numbers (voxel coordinates) as input.</p>
+<p>An important point to emphasize is that the tract-based and connectivity-based ontologies are not diametrically opposed; in fact they should be regarded as highly complementary. This is why we have also included support in ConWhAt for standard tract-based atlas analyses.</p>
+</div>
+<div class="section" id="representation">
+<h2>Representation<a class="headerlink" href="#representation" title="Permalink to this headline">¶</a></h2>
+<p>Traditionally, anatomical atlases have (as the name suggests) existed as collections of more-or-less schematic two- or three-dimensional depictions, printed on the pages of a (generally quite large) book. Whilst this mode of representation is by no means uncommon, atlases in modern neuroimaging are generally understood to be digital data structures, which bear varying degrees of resemblance to their paper-based forebears.</p>
+<p>In particular, representations of white matter anatomical data in neuroimaging come in two flavours: <em>image-based</em> (which we refer to as <em>volumetric</em>), and (tractography) <em>streamline-based</em> (which we refer to neologistically as <em>streamlinetric</em>). These two forms of representation are very different beasts, each with its own set of distinctive features and pros/cons (which is why we make a major effort to support both in ConWhAt)</p>
+<p>For example: the basic units of volumetric representations are scalar-valued (voxel intensities), which when taken as a set can code for complex and rich encoding of 3D shapes in virtue of their arrangement on a regular 3D grid. In contrast, the basic units of streamlinetric representations are vector-valued; namely lists of coordinates in 3D space. Each individual streamline (unlike each individual voxel) therefore provides some holistic 3D shape information. The closest equivalent of voxel intensities for streamlines would be the presence of overlapping multiple streamlines; although this is much less compressed than scalar intensity values.</p>
+<p>The definition and interpretation of ‘damage’ also turns out to be somewhat different for volumetric vs. streamlinetric representations. In the volumetric case, damage (defined as e.g. proportional overlap with a lesion) is evaluated independently for every voxel. In the streamlinetric case, damage is instead evaluated independently for every streamline, with the important corollary that evaluations at different spatial locations are not independent of each other. In short, if an upstream part of a streamline is considered to be damaged, then downstream parts are also considered to be damaged, even if they themselves are nowhere near the damaged area. Which is, of course, how one would expect real damage to axons to operate. Streamlinetric quantifications of damage are somewhat more difficult to work with than their volumetric equivalents, however.</p>
+<p>There has been relatively little work done on direct comparisons of volumetric and streamlinetric characterizations of lesions, or indeed of white matter in general. ConWhAt is to our knowledge the first and only atlas-based tool that allows direct comparison between the two.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="conwhat_atlases.html" class="btn btn-neutral float-right" title="ConWhAt Atlases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright John Griffiths &amp; Contributors
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exploring the ConWhAt Atlases &mdash; ConWhAt 0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/debug.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Defining a synthetic lesion" href="eg03_defining_a_synthetic_lesion.html" />
+    <link rel="prev" title="Downloading ConWhAt Atlases" href="eg01_downloading_conwhat_atlases.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ConWhAt
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">About ConWhAt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about_conwhat/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html">Ontology &amp; Representation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html#ontology">Ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html#representation">Representation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about_conwhat/conwhat_atlases.html">ConWhAt Atlases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-latest-github-master-source">Using latest github master source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-pypi">Using pypi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-with-docker">Using with docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html">Downloading ConWhAt Atlases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html#download-the-atlases-and-take-a-look">Download the atlases and take a look</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exploring the ConWhAt Atlases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#load-and-explore">Load and explore</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="eg03_defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg03_defining_a_synthetic_lesion.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eg04_assessing_the_network_impact_of_lesions.html">Assessing the network impact of a lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg04_assessing_the_network_impact_of_lesions.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg04_assessing_the_network_impact_of_lesions.html#grab-lesion">Grab lesion</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ConWhAt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Exploring the ConWhAt Atlases</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg02-exploring-conwhat-atlases-py"><span class="std std-ref">here</span></a>
+to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="exploring-the-conwhat-atlases">
+<span id="sphx-glr-auto-examples-eg02-exploring-conwhat-atlases-py"></span><h1>Exploring the ConWhAt Atlases<a class="headerlink" href="#exploring-the-conwhat-atlases" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># There are four different atlas types in ConWhat, corresponding to the 2 ontology types (Tract-based / Connectivity-Based) and 2 representation types (Volumetric / Streamlinetric).</span>
+<span class="c1">#</span>
+<span class="c1"># (More on this schema [here](http://conwhat.readthedocs.io/en/latest/about_conwhat/ontology_and_representation.html))</span>
+</pre></div>
+</div>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ConWhAt stuff</span>
+<span class="kn">from</span> <span class="nn">conwhat</span> <span class="kn">import</span> <span class="n">VolConnAtlas</span><span class="p">,</span><span class="n">StreamConnAtlas</span><span class="p">,</span><span class="n">VolTractAtlas</span><span class="p">,</span><span class="n">StreamTractAtlas</span>
+<span class="kn">from</span> <span class="nn">conwhat.viz.volume</span> <span class="kn">import</span> <span class="n">plot_vol_scatter</span><span class="p">,</span><span class="n">plot_vol_and_rois_nilearn</span>
+
+<span class="c1"># Neuroimaging stuff</span>
+<span class="kn">import</span> <span class="nn">nibabel</span> <span class="k">as</span> <span class="nn">nib</span>
+<span class="kn">from</span> <span class="nn">nilearn.plotting</span> <span class="kn">import</span> <span class="n">plot_stat_map</span><span class="p">,</span><span class="n">plot_surf_roi</span>
+<span class="kn">from</span> <span class="nn">nilearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_surf_fsaverage</span>
+<span class="kn">from</span> <span class="nn">nilearn.surface</span> <span class="kn">import</span> <span class="n">load_surf_mesh</span>
+
+<span class="c1"># Viz stuff</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Generic stuff</span>
+<span class="kn">import</span> <span class="nn">glob</span><span class="o">,</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span><span class="o">,</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+
+<span class="c1"># supress warnings for docs build</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="load-and-explore">
+<h2>Load and explore<a class="headerlink" href="#load-and-explore" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># We&#39;ll start with the scale 33 lausanne 2008 volumetric connectivity-based atlas.</span>
+
+<span class="c1"># Define the atlas name and top-level directory location</span>
+
+<span class="n">atlas_dir</span> <span class="o">=</span> <span class="s1">&#39;conwhat_atlases&#39;</span>
+<span class="n">atlas_name</span> <span class="o">=</span> <span class="s1">&#39;CWL2k8Sc33Vol3d100s_v01&#39;</span>
+
+<span class="c1"># Initialize the atlas class</span>
+
+<span class="n">vca</span> <span class="o">=</span> <span class="n">VolConnAtlas</span><span class="p">(</span><span class="n">atlas_dir</span><span class="o">=</span><span class="n">atlas_dir</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">atlas_name</span><span class="p">,</span>
+                   <span class="n">atlas_name</span><span class="o">=</span><span class="n">atlas_name</span><span class="p">)</span>
+
+<span class="c1"># This atlas object contains various pieces of general information</span>
+
+<span class="n">vca</span><span class="o">.</span><span class="n">atlas_name</span>
+
+<span class="n">vca</span><span class="o">.</span><span class="n">atlas_dir</span>
+
+<span class="c1"># Information about each atlas entry is contained in the `vfms` attribute, which returns a pandas dataframe</span>
+
+<span class="n">vca</span><span class="o">.</span><span class="n">vfms</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="c1"># Additionally, connectivity-based atlases also contain a `networkx` graph object `vca.Gnx`,</span>
+<span class="c1"># which contains information about each connectome edge</span>
+
+<span class="n">vca</span><span class="o">.</span><span class="n">Gnx</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="mi">10</span><span class="p">,</span><span class="mi">35</span><span class="p">)]</span>
+
+<span class="c1"># Individual atlas entry nifti images can be grabbed like so</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">vca</span><span class="o">.</span><span class="n">get_vol_from_vfm</span><span class="p">(</span><span class="mi">1637</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plot_stat_map</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">figure</span><span class="o">=</span><span class="n">fig</span><span class="p">,</span><span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Or alternatively as a 3D scatter plot, along with the x,y,z bounding box</span>
+
+<span class="n">vca</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1637</span><span class="p">]</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plot_vol_scatter</span><span class="p">(</span><span class="n">vca</span><span class="o">.</span><span class="n">get_vol_from_vfm</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">bg_img</span><span class="o">=</span><span class="s1">&#39;nilearn_destrieux&#39;</span><span class="p">,</span>
+                      <span class="n">bg_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="s1">&#39;k&#39;</span><span class="p">},</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">]);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">]);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_zlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">]);</span>
+
+<span class="c1"># We can also view the weights matrix like so:</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">vca</span><span class="o">.</span><span class="n">weights</span><span class="p">),</span><span class="n">xticklabels</span><span class="o">=</span><span class="n">vca</span><span class="o">.</span><span class="n">region_labels</span><span class="p">,</span>
+            <span class="n">yticklabels</span><span class="o">=</span><span class="n">vca</span><span class="o">.</span><span class="n">region_labels</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># The `vca` object also contains x,y,z bounding boxes for each structure</span>
+
+<span class="c1"># We also stored additional useful information about the ROIs in the associated parcellation, including cortical/subcortical labels</span>
+
+<span class="n">vca</span><span class="o">.</span><span class="n">cortex</span>
+
+<span class="c1"># ...hemisphere labels</span>
+
+<span class="n">vca</span><span class="o">.</span><span class="n">hemispheres</span>
+
+<span class="c1"># ...and region mappings to freesurfer&#39;s fsaverage brain</span>
+
+<span class="n">vca</span><span class="o">.</span><span class="n">region_mapping_fsav_lh</span>
+
+<span class="n">vca</span><span class="o">.</span><span class="n">region_mapping_fsav_rh</span>
+
+<span class="c1"># which can be used for, e.g. plotting ROI data on a surface</span>
+
+<span class="n">fsav</span> <span class="o">=</span> <span class="n">fetch_surf_fsaverage</span><span class="p">(</span><span class="s1">&#39;fsaverage7&#39;</span><span class="p">);</span>
+<span class="n">fsav_lhp</span> <span class="o">=</span>  <span class="n">load_surf_mesh</span><span class="p">(</span><span class="n">fsav</span><span class="p">[</span><span class="s1">&#39;pial_left&#39;</span><span class="p">]);</span>
+<span class="n">vtx</span><span class="p">,</span><span class="n">tri</span> <span class="o">=</span> <span class="n">fsav_lhp</span><span class="o">.</span><span class="n">coordinates</span><span class="p">,</span><span class="n">fsav_lhp</span><span class="o">.</span><span class="n">faces</span>
+
+<span class="n">disp</span> <span class="o">=</span> <span class="n">plot_surf_roi</span><span class="p">([</span><span class="n">vtx</span><span class="p">,</span><span class="n">tri</span><span class="p">],</span><span class="n">vca</span><span class="o">.</span><span class="n">region_mapping_fsav_lh</span><span class="p">);</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-eg02-exploring-conwhat-atlases-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/f4d069b66af94148adc1129204be19e8/eg02_exploring_conwhat_atlases.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eg02_exploring_conwhat_atlases.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/e0a200ad8a5a0b9ac8e56958a67fcda6/eg02_exploring_conwhat_atlases.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">eg02_exploring_conwhat_atlases.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="eg03_defining_a_synthetic_lesion.html" class="btn btn-neutral float-right" title="Defining a synthetic lesion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="eg01_downloading_conwhat_atlases.html" class="btn btn-neutral float-left" title="Downloading ConWhAt Atlases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright John Griffiths &amp; Contributors
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

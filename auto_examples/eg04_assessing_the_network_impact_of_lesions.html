@@ -1,0 +1,430 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Assessing the network impact of a lesion &mdash; ConWhAt 0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/debug.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Defining a synthetic lesion" href="eg03_defining_a_synthetic_lesion.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ConWhAt
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">About ConWhAt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about_conwhat/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html">Ontology &amp; Representation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html#ontology">Ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html#representation">Representation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about_conwhat/conwhat_atlases.html">ConWhAt Atlases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-latest-github-master-source">Using latest github master source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-pypi">Using pypi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-with-docker">Using with docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html">Downloading ConWhAt Atlases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html#download-the-atlases-and-take-a-look">Download the atlases and take a look</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eg02_exploring_conwhat_atlases.html">Exploring the ConWhAt Atlases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg02_exploring_conwhat_atlases.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg02_exploring_conwhat_atlases.html#load-and-explore">Load and explore</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="eg03_defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg03_defining_a_synthetic_lesion.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Assessing the network impact of a lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#grab-lesion">Grab lesion</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ConWhAt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Assessing the network impact of a lesion</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg04-assessing-the-network-impact-of-lesions-py"><span class="std std-ref">here</span></a>
+to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="assessing-the-network-impact-of-a-lesion">
+<span id="sphx-glr-auto-examples-eg04-assessing-the-network-impact-of-lesions-py"></span><h1>Assessing the network impact of a lesion<a class="headerlink" href="#assessing-the-network-impact-of-a-lesion" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ConWhAt stuff</span>
+<span class="kn">from</span> <span class="nn">conwhat</span> <span class="kn">import</span> <span class="n">VolConnAtlas</span><span class="p">,</span><span class="n">StreamConnAtlas</span><span class="p">,</span><span class="n">VolTractAtlas</span><span class="p">,</span><span class="n">StreamTractAtlas</span>
+<span class="kn">from</span> <span class="nn">conwhat.viz.volume</span> <span class="kn">import</span> <span class="n">plot_vol_scatter</span>
+
+<span class="c1"># Neuroimaging stuff</span>
+<span class="kn">import</span> <span class="nn">nibabel</span> <span class="k">as</span> <span class="nn">nib</span>
+<span class="kn">from</span> <span class="nn">nilearn.plotting</span> <span class="kn">import</span> <span class="p">(</span><span class="n">plot_stat_map</span><span class="p">,</span><span class="n">plot_surf_roi</span><span class="p">,</span><span class="n">plot_roi</span><span class="p">,</span>
+                             <span class="n">plot_connectome</span><span class="p">,</span><span class="n">find_xyz_cut_coords</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">nilearn.image</span> <span class="kn">import</span> <span class="n">resample_to_img</span>
+<span class="kn">from</span> <span class="nn">nilearn.datasets</span> <span class="kn">import</span> <span class="n">load_mni152_template</span>
+
+<span class="c1"># Viz stuff</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Generic stuff</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">glob</span><span class="o">,</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span><span class="o">,</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="c1"># (for docs only: suppress warnings)</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="grab-lesion">
+<h2>Grab lesion<a class="headerlink" href="#grab-lesion" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># We now use the synthetic lesion constructed in the previous example in a ConWhAt lesion analysis.</span>
+
+<span class="n">lesion_file</span> <span class="o">=</span> <span class="s1">&#39;synthetic_lesion_20mm_sphere_-46_-60_6.nii.gz&#39;</span> <span class="c1"># we created this file from scratch in the previous example</span>
+<span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">lesion_file</span><span class="p">)</span>
+
+<span class="c1"># Take another quick look at this mask:</span>
+
+<span class="n">lesion_img</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">lesion_file</span><span class="p">)</span>
+<span class="n">t1_mni_img</span> <span class="o">=</span> <span class="n">load_mni152_template</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plot_roi</span><span class="p">(</span><span class="n">lesion_file</span><span class="p">,</span><span class="n">bg_img</span><span class="o">=</span><span class="n">t1_mni_img</span><span class="p">,</span><span class="n">black_bg</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+
+<span class="c1"># Since our lesion mask does not (by construction) have a huge amount of spatial detail, it makes sense to use one of the lower-resolution atlas. As one might expect, computation time is considerably faster for lower-resolution atlases.</span>
+
+<span class="n">cw_atlases_dir</span> <span class="o">=</span> <span class="s1">&#39;conwhat_atlases&#39;</span>
+<span class="n">atlas_name</span> <span class="o">=</span> <span class="s1">&#39;CWL2k8Sc33Vol3d100s_v01&#39;</span>
+<span class="n">atlas_dir</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">/</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">cw_atlases_dir</span><span class="p">,</span> <span class="n">atlas_name</span><span class="p">)</span>
+<span class="n">atlas_dir</span>
+
+<span class="c1"># See the previous tutorial on &#39;exploring the conwhat atlases&#39;  for more info on how to examine the components of a given atlas in *ConWhAt*.</span>
+
+<span class="c1"># Initialize the atlas</span>
+
+<span class="n">cw_vca</span> <span class="o">=</span> <span class="n">VolConnAtlas</span><span class="p">(</span><span class="n">atlas_dir</span><span class="o">=</span><span class="n">atlas_dir</span><span class="p">)</span>
+
+<span class="c1"># Choose which connections to evaluate.</span>
+<span class="c1">#</span>
+<span class="c1"># This is normally an array of numbers indexing entries in `cw_vca.vfms`.</span>
+<span class="c1">#</span>
+<span class="c1"># Pre-defining connection subsets is a useful way of speeding up large analyses, especially if one is only interested in connections between specific sets of regions.</span>
+<span class="c1">#</span>
+<span class="c1"># As we are using a relatively small atlas, and our lesion is not too extensive, we can assess all connections.</span>
+
+<span class="n">idxs</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span> <span class="c1"># alternatively, something like: range(1,100), indicates the first 100 cnxns (rows in .vmfs)</span>
+
+<span class="c1"># Now, compute lesion overlap statistics.</span>
+
+<span class="n">jlc_dir</span> <span class="o">=</span> <span class="s1">&#39;cw_joblib_cache_dir&#39;</span> <span class="c1"># this is the cache dir where joblib writes temporary file\n</span>
+
+<span class="n">lo_df</span><span class="p">,</span><span class="n">lo_nx</span> <span class="o">=</span> <span class="n">cw_vca</span><span class="o">.</span><span class="n">compute_hit_stats</span><span class="p">(</span><span class="n">lesion_file</span><span class="p">,</span><span class="n">idxs</span><span class="p">,</span><span class="n">n_jobs</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">joblib_cache_dir</span><span class="o">=</span><span class="n">jlc_dir</span><span class="p">)</span>
+
+<span class="c1"># This takes about 20 minutes to run.</span>
+<span class="c1">#</span>
+<span class="c1"># `vca.compute_hit_stats()` returns a `pandas` dataframe, `lo_df`, and a `networkx` object, `lo_nx`.</span>
+<span class="c1">#</span>
+<span class="c1"># Both contain mostly the same information, which is sometimes more useful in one of these formats and sometimes in the other.</span>
+<span class="c1">#</span>
+<span class="c1"># `lo_df` is a table, with rows corresponding to each connection, and columns for each of a wide set of [statistical metrics](https://en.wikipedia.org/wiki/Sensitivity_and_specificity) for evaluating sensitivity and specificity of binary hit/miss data:</span>
+
+<span class="n">lo_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="c1"># Typically we will be mainly interested in two of these metric scores:</span>
+<span class="c1">#</span>
+<span class="c1"># `TPR` - True positive (i.e. hit) rate: number of true positives, divided by number of true positives + number of false negatives</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># `corr_thrbin` -  Pearson correlation between the lesion amge and the thresholded, binarized connectome edge image (group-level visitation map)</span>
+
+<span class="n">lo_df</span><span class="p">[[</span><span class="s1">&#39;TPR&#39;</span><span class="p">,</span> <span class="s1">&#39;corr_thrbin&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">T</span>
+
+<span class="c1"># We can obtain these numbers as a &#39;modification matrix&#39; (connectivity matrix)</span>
+
+<span class="n">tpr_adj</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">to_pandas_adjacency</span><span class="p">(</span><span class="n">lo_nx</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="s1">&#39;TPR&#39;</span><span class="p">)</span>
+<span class="n">cpr_adj</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">to_pandas_adjacency</span><span class="p">(</span><span class="n">lo_nx</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="s1">&#39;corr_thrbin&#39;</span><span class="p">)</span>
+
+<span class="c1"># These two maps are, unsurprisingly, very similar:</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">tpr_adj</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">cpr_adj</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">tpr_adj</span><span class="p">,</span><span class="n">xticklabels</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">yticklabels</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cpr_adj</span><span class="p">,</span><span class="n">xticklabels</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">yticklabels</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+<span class="c1"># (...with an alternative color scheme...)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">tpr_adj</span><span class="p">,</span> <span class="n">xticklabels</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">yticklabels</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">,</span>
+                   <span class="n">mask</span><span class="o">=</span><span class="n">tpr_adj</span><span class="o">.</span><span class="n">values</span><span class="o">==</span><span class="mi">0</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cpr_adj</span><span class="p">,</span><span class="n">xticklabels</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">yticklabels</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">,</span>
+                   <span class="n">mask</span><span class="o">=</span><span class="n">cpr_adj</span><span class="o">.</span><span class="n">values</span><span class="o">==</span><span class="mi">0</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+<span class="c1"># We can list directly the most affected (greatest % overlap) connections,</span>
+
+<span class="n">cw_vca</span><span class="o">.</span><span class="n">vfms</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">lo_df</span><span class="o">.</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="c1"># To plot the modification matrix information on a brain, we first need to some spatial locations to plot as nodes. For these, we calculate (an approprixation to) each atlas region&#39;s centriod location:</span>
+
+<span class="n">parc_img</span> <span class="o">=</span> <span class="n">cw_vca</span><span class="o">.</span><span class="n">region_nii</span>
+<span class="n">parc_dat</span> <span class="o">=</span> <span class="n">parc_img</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+<span class="n">parc_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">parc_dat</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>
+
+<span class="n">ccs</span> <span class="o">=</span> <span class="p">{</span><span class="n">parc_val</span><span class="p">:</span> <span class="n">find_xyz_cut_coords</span><span class="p">(</span><span class="n">nib</span><span class="o">.</span><span class="n">Nifti1Image</span><span class="p">((</span><span class="n">parc_dat</span><span class="o">==</span><span class="n">parc_val</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">),</span><span class="n">parc_img</span><span class="o">.</span><span class="n">affine</span><span class="p">),</span>
+                                   <span class="n">activation_threshold</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">parc_val</span> <span class="ow">in</span> <span class="n">parc_vals</span><span class="p">}</span>
+<span class="n">ccs_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ccs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+<span class="c1"># Now plotting on a glass brain:</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">plot_connectome</span><span class="p">(</span><span class="n">tpr_adj</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">ccs_arr</span><span class="p">,</span><span class="n">axes</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span><span class="n">edge_threshold</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">edge_cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">,</span><span class="n">edge_vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">edge_vmax</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span><span class="n">edge_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;linewidth&#39;</span><span class="p">:</span> <span class="mf">2.5</span><span class="p">},</span>
+                    <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span><span class="n">node_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">});</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-eg04-assessing-the-network-impact-of-lesions-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/42ad878ea71da40c31610c10cfd467e4/eg04_assessing_the_network_impact_of_lesions.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eg04_assessing_the_network_impact_of_lesions.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/3b0a4760ff5926b91f13afbce9890a27/eg04_assessing_the_network_impact_of_lesions.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">eg04_assessing_the_network_impact_of_lesions.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="eg03_defining_a_synthetic_lesion.html" class="btn btn-neutral float-left" title="Defining a synthetic lesion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright John Griffiths &amp; Contributors
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

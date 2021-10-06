@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Defining a synthetic lesion &mdash; ConWhAt 0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/debug.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Assessing the network impact of a lesion" href="eg04_assessing_the_network_impact_of_lesions.html" />
+    <link rel="prev" title="Exploring the ConWhAt Atlases" href="eg02_exploring_conwhat_atlases.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ConWhAt
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">About ConWhAt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about_conwhat/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html">Ontology &amp; Representation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html#ontology">Ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html#representation">Representation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about_conwhat/conwhat_atlases.html">ConWhAt Atlases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-latest-github-master-source">Using latest github master source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-pypi">Using pypi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-with-docker">Using with docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html">Downloading ConWhAt Atlases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html#download-the-atlases-and-take-a-look">Download the atlases and take a look</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eg02_exploring_conwhat_atlases.html">Exploring the ConWhAt Atlases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg02_exploring_conwhat_atlases.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg02_exploring_conwhat_atlases.html#load-and-explore">Load and explore</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Defining a synthetic lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eg04_assessing_the_network_impact_of_lesions.html">Assessing the network impact of a lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg04_assessing_the_network_impact_of_lesions.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg04_assessing_the_network_impact_of_lesions.html#grab-lesion">Grab lesion</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ConWhAt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Defining a synthetic lesion</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg03-defining-a-synthetic-lesion-py"><span class="std std-ref">here</span></a>
+to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="defining-a-synthetic-lesion">
+<span id="sphx-glr-auto-examples-eg03-defining-a-synthetic-lesion-py"></span><h1>Defining a synthetic lesion<a class="headerlink" href="#defining-a-synthetic-lesion" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># # Defining a Lesion</span>
+
+<span class="c1"># Conducting a lesion analysis in ConWhAt is extremely simple. All that is needed is a binary  `.nii` format lesion mask, with ones indicating lesioned tissue, and zeros elsewhere.</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># &gt;(Note: we terms like &#39;lesion&#39; and &#39;damage&#39; throughout most of this documentation, as that is the most natural primary context for ConWhAt analyses. Remember however that all we are doing at the end of the day is doing a set of look-up operations between a list of standard space coordinates on the one hand (as defined by non-zero values in a `.nii` image), and the spatial locations of each &#39;connectome edge&#39; -  i.e. each entry in our anatomical connectivity matrix. One can envisave many alternative interpretations/applications of this procedure; for example to map the connectivity effects of magnetic field or current distributions from nonivasive brain stimulation). Still, for concreteness and simplicity, we stick with &#39;lesion&#39;, &#39;damage&#39;, etc. for the most part. )</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># A common way to obtain a lesion map is to from a patient&#39;s T1-weighted MR image. Although this can be done manually, it is strongly recommended to use an automated lesion segmentation tools, followed by manual editing.</span>
+<span class="c1">#</span>
+<span class="c1"># An alternative way is simply to define a lesion location using standard space coordinates, and build a &#39;lesion&#39; mask *de-novo*. This is what we do in the following example. On the next page we do a ConWhAt connectome-based decomposition analysis on this &#39;synthetic&#39; lesion mask.</span>
+<span class="c1">#</span>
+<span class="c1"># ---</span>
+</pre></div>
+</div>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ConWhAt stuff</span>
+<span class="kn">from</span> <span class="nn">conwhat</span> <span class="kn">import</span> <span class="n">VolConnAtlas</span><span class="p">,</span><span class="n">StreamConnAtlas</span><span class="p">,</span><span class="n">VolTractAtlas</span><span class="p">,</span><span class="n">StreamTractAtlas</span>
+<span class="kn">from</span> <span class="nn">conwhat.viz.volume</span> <span class="kn">import</span> <span class="n">plot_vol_and_rois_nilearn</span>
+
+<span class="c1"># Neuroimaging stuff</span>
+<span class="kn">import</span> <span class="nn">nibabel</span> <span class="k">as</span> <span class="nn">nib</span>
+<span class="kn">from</span> <span class="nn">nilearn.plotting</span> <span class="kn">import</span> <span class="n">plot_roi</span>
+<span class="kn">from</span> <span class="nn">nilearn.datasets</span> <span class="kn">import</span> <span class="n">load_mni152_template</span>
+<span class="kn">from</span> <span class="nn">nipy.labs.spatial_models.mroi</span> <span class="kn">import</span> <span class="n">subdomain_from_balls</span>
+<span class="kn">from</span> <span class="nn">nipy.labs.spatial_models.discrete_domain</span> <span class="kn">import</span> <span class="n">grid_domain_from_image</span>
+
+<span class="c1"># Viz stuff</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c1"># Generic stuff</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span><span class="nn">sys</span><span class="o">,</span><span class="nn">glob</span><span class="o">,</span><span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># (For docs only: suppress warnings)</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define some variables</span>
+
+<span class="c1"># Locate the standard space template image</span>
+
+<span class="n">t1_mni_url</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/Washington-University/HCPpipelines/raw/master/global/templates/MNI152_T1_1mm_brain.nii.gz&#39;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;wget &#39;</span> <span class="o">+</span> <span class="n">t1_mni_url</span><span class="p">)</span>
+<span class="n">t1_mni_file</span> <span class="o">=</span> <span class="n">t1_mni_url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">t1_mni_img</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">t1_mni_file</span><span class="p">)</span>
+
+<span class="c1"># This is the output we will save to file and use in the next example</span>
+<span class="n">lesion_file</span> <span class="o">=</span> <span class="s1">&#39;synthetic_lesion_20mm_sphere_-46_-60_6.nii.gz&#39;</span>
+
+<span class="c1"># Define the &#39;synthetic lesion&#39; location and size using standard (MNI) space coordinates</span>
+<span class="n">com</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">46</span><span class="p">,</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="c1"># com = centre of mass</span>
+<span class="n">rad</span> <span class="o">=</span> <span class="mi">20</span>             <span class="c1"># radius</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the ROI</span>
+<span class="n">domain</span> <span class="o">=</span> <span class="n">grid_domain_from_image</span><span class="p">(</span><span class="n">t1_mni_img</span><span class="p">)</span>
+<span class="n">lesion_img</span> <span class="o">=</span> <span class="n">subdomain_from_balls</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">com</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">rad</span><span class="p">]))</span><span class="o">.</span><span class="n">to_image</span><span class="p">()</span>
+
+<span class="c1"># Plot on brain slices</span>
+<span class="n">disp</span> <span class="o">=</span> <span class="n">plot_roi</span><span class="p">(</span><span class="n">lesion_img</span><span class="p">,</span><span class="n">bg_img</span><span class="o">=</span><span class="n">t1_mni_img</span><span class="p">,</span><span class="n">black_bg</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+
+<span class="c1"># Save to file</span>
+<span class="n">lesion_img</span><span class="o">.</span><span class="n">to_filename</span><span class="p">(</span><span class="n">lesion_file</span><span class="p">)</span>
+
+<span class="c1"># ...now we move on to doing a lesion analysis with this file.</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-eg03-defining-a-synthetic-lesion-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/ddb9f3bb4f0406ba561171df5e37ab6f/eg03_defining_a_synthetic_lesion.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eg03_defining_a_synthetic_lesion.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/7c8dd24194be29858e75ed571a9dfbc0/eg03_defining_a_synthetic_lesion.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">eg03_defining_a_synthetic_lesion.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="eg04_assessing_the_network_impact_of_lesions.html" class="btn btn-neutral float-right" title="Assessing the network impact of a lesion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="eg02_exploring_conwhat_atlases.html" class="btn btn-neutral float-left" title="Exploring the ConWhAt Atlases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright John Griffiths &amp; Contributors
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
