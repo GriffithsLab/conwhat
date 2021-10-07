@@ -1,7 +1,7 @@
 # ConWhAt - a library for Connectome-based White matter Atlas analyses
 
 <p align="center" >
-<img src ="docs/conwhat_atlas_fig.png" height="170"  >
+<img src ="doc/img/conwhat_logo.png" height="170"  >
 </p>
 
 ConWhAt is a tool for studying the effects of white matter damage on brain networks. 
@@ -15,7 +15,7 @@ Our main goal in developing ConWhAt is to support patient-specific neurocomputat
 
 To get started with ConWhAt and for more info on the connectome-based white matter atlas methodology:
 
-- Read the [documentation](http://conwhat.readthedocs.io)
+- Read the [documentation](http://griffithslab.github.io/conwhat)
 - Read the [research paper](#References)
 - Go to the [ConWhAt NITRC page](https://www.nitrc.org/projects/conwhat/) to download the latest atlas data
 
