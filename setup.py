@@ -1,32 +1,30 @@
 #!/usr/bin/env python
 
 from setuptools import setup, find_packages
-import versioneer 
 
-setup(name='conwhat', #version=versioneer.get_version(),
-      description='python library for connectome-based white matter atlas analyses in neuroimaging',
-      long_description='python library for connectome-based white matter atlas analyses in neuroimaging',
-      keywords='white matter, tractography, MRI, DTI, diffusion, python',
-      author='John David Griffiths',
-      author_email='j.davidgriffiths@gmail.com',
-      url='https://github.com/GriffithsLab/conwhat',
-      packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]), 
-      install_requires=['numpy',  'setuptools'],
-      classifiers=[
-          'Intended Audience :: Science/Research',
-          'Programming Language :: Python',
-          'Topic :: Software Development',
-          'Topic :: Scientific/Engineering',
-          'Operating System :: Microsoft :: Windows',
-          'Operating System :: POSIX',
-          'Operating System :: Unix',
-          'Operating System :: MacOS',
-          'Programming Language :: Python :: 3.9',
-      ],
-      entry_points={
-          "console_scripts": [
-              "conwhat=conwhat.__main__:main",
-          ]
-      },
-      #cmdclass=versioneer.get_cmdclass()
-      )
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+with open('requirements.txt', 'r') as fp:
+    install_requires = fp.read().splitlines()
+
+setup(
+    name="conwhat", 
+    version="0.1",
+    author="John David Griffiths",
+    author_email="j.davidgriffiths@gmail.com",
+    description='python library for connectivity based white matter atlas analysis',
+    keywords='white matter, tractography, MRI, DTI, diffusion, python',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    install_requires = install_requires,
+    url='https://github.com/griffithslab/conwhat',
+    license="BSD (3-clause)",
+    packages=find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.7',
+)
