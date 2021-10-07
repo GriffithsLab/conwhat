@@ -9,6 +9,7 @@ joblib
 matplotlib
 sphinx>=1.5.1
 sphinx_rtd_theme
+pyyaml
 nbsphinx
 jupyter
 ipykernel
