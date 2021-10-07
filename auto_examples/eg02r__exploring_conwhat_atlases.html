@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Exploring the ConWhAt Atlases &mdash; ConWhAt 0.0.0 documentation</title>
@@ -13,18 +14,15 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
 
   
   
@@ -38,10 +36,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/debug.js"></script>
@@ -101,7 +99,7 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">About ConWhAt</span></p>
+              <p><span class="caption-text">About ConWhAt</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html">Ontology &amp; Representation</a><ul>
@@ -111,7 +109,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/conwhat_atlases.html">ConWhAt Atlases</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<p><span class="caption-text">Getting Started</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-latest-github-master-source">Using latest github master source</a></li>
@@ -130,7 +128,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
+<p><span class="caption-text">Analyses of Brain Lesions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="eg03r__defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="eg03r__defining_a_synthetic_lesion.html#setup">Setup</a></li>
@@ -206,17 +204,16 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg02r-exploring-conwhat-atlases-py"><span class="std std-ref">here</span></a>
-to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg02r-exploring-conwhat-atlases-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="exploring-the-conwhat-atlases">
+<section class="sphx-glr-example-title" id="exploring-the-conwhat-atlases">
 <span id="sphx-glr-auto-examples-eg02r-exploring-conwhat-atlases-py"></span><h1>Exploring the ConWhAt Atlases<a class="headerlink" href="#exploring-the-conwhat-atlases" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># There are four different atlas types in ConWhat, corresponding to the 2 ontology types (Tract-based / Connectivity-Based) and 2 representation types (Volumetric / Streamlinetric).</span>
 <span class="c1">#</span>
 <span class="c1"># (More on this schema [here](http://conwhat.readthedocs.io/en/latest/about_conwhat/ontology_and_representation.html))</span>
 </pre></div>
 </div>
-<div class="section" id="setup">
+<section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ConWhAt stuff</span>
 <span class="kn">from</span> <span class="nn">conwhat</span> <span class="kn">import</span> <span class="n">VolConnAtlas</span><span class="p">,</span><span class="n">StreamConnAtlas</span><span class="p">,</span><span class="n">VolTractAtlas</span><span class="p">,</span><span class="n">StreamTractAtlas</span>
@@ -239,8 +236,8 @@ to download the full example code</p>
 <span class="kn">import</span> <span class="nn">warnings</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="load-and-explore">
+</section>
+<section id="load-and-explore">
 <h2>Load and explore<a class="headerlink" href="#load-and-explore" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># We&#39;ll start with the scale 33 lausanne 2008 volumetric connectivity-based atlas.</span>
 
@@ -319,26 +316,43 @@ to download the full example code</p>
 </pre></div>
 </div>
 <ul class="sphx-glr-horizontal">
-<li><img src="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_001.png" srcset="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_001.png" alt="eg02r  exploring conwhat atlases" class = "sphx-glr-multi-img"/></li>
-<li><img src="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_002.png" srcset="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_002.png" alt="eg02r  exploring conwhat atlases" class = "sphx-glr-multi-img"/></li>
-<li><img src="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_003.png" srcset="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_003.png" alt="eg02r  exploring conwhat atlases" class = "sphx-glr-multi-img"/></li>
-<li><img src="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_004.png" srcset="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_004.png" alt="eg02r  exploring conwhat atlases" class = "sphx-glr-multi-img"/></li>
+<li><img alt="eg02r  exploring conwhat atlases" class="sphx-glr-multi-img" src="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_001.png" />
+</li>
+<li><img alt="eg02r  exploring conwhat atlases" class="sphx-glr-multi-img" src="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_002.png" />
+</li>
+<li><img alt="eg02r  exploring conwhat atlases" class="sphx-glr-multi-img" src="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_003.png" />
+</li>
+<li><img alt="eg02r  exploring conwhat atlases" class="sphx-glr-multi-img" src="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_004.png" />
+</li>
 </ul>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>loading file mapping
 loading vol bbox
 loading connectivity
 getting atlas entry 1637: image file conwhat_atlases/CWL2k8Sc33Vol3d100s_v01/vismap_grp_11-36_norm.nii.gz
-/nethome/kcni/jgriffiths/.local/lib/python3.8/site-packages/nilearn/plotting/img_plotting.py:341: FutureWarning: Default resolution of the MNI template will change from 2mm to 1mm in version 0.10.0
+/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nilearn/plotting/img_plotting.py:341: FutureWarning: Default resolution of the MNI template will change from 2mm to 1mm in version 0.10.0
   anat_img = load_mni152_template()
 getting atlas entry 1: image file conwhat_atlases/CWL2k8Sc33Vol3d100s_v01/vismap_grp_39-56_norm.nii.gz
-/external/rprshnas01/netdata_kcni/jglab/MemberSpaces/jdg/Code/libraries_of_mine/github/conwhat/conwhat/viz/volume.py:48: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
+/home/runner/work/ConWhAt/ConWhAt/conwhat/viz/volume.py:48: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
   ax = fig.gca(projection=&#39;3d&#39;)
-/nethome/kcni/jgriffiths/.local/lib/python3.8/site-packages/numpy/lib/npyio.py:2407: VisibleDeprecationWarning: Reading unicode strings without specifying the encoding argument is deprecated. Set the encoding, use None for the system default.
+
+Dataset created in /home/runner/nilearn_data/destrieux_2009
+
+Downloading data from https://www.nitrc.org/frs/download.php/11942/destrieux2009.tgz ...
+ ...done. (0 seconds, 0 min)
+Extracting data from /home/runner/nilearn_data/destrieux_2009/2a2e5a5707983d509d9319c692c867ab/destrieux2009.tgz..... done.
+/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/numpy/lib/npyio.py:2407: VisibleDeprecationWarning: Reading unicode strings without specifying the encoding argument is deprecated. Set the encoding, use None for the system default.
   output = genfromtxt(fname, **kwargs)
+
+Dataset created in /home/runner/nilearn_data/fsaverage
+
+Downloading data from https://osf.io/q7a5k/download ...
+
+Downloaded 6488064 of 28905506 bytes (22.4%,    3.5s remaining) ...done. (4 seconds, 0 min)
+Extracting data from /home/runner/nilearn_data/fsaverage/5592d63c5c8039b4f902396c128dcd85/download..... done.
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  40.977 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  23.754 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-eg02r-exploring-conwhat-atlases-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/85b681df62c4e207d0bc1ca4fa992b7a/eg02r__exploring_conwhat_atlases.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eg02r__exploring_conwhat_atlases.py</span></code></a></p>
@@ -348,8 +362,8 @@ getting atlas entry 1: image file conwhat_atlases/CWL2k8Sc33Vol3d100s_v01/vismap
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

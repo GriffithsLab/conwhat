@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Installation &mdash; ConWhAt 0.0.0 documentation</title>
@@ -13,18 +14,15 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
 
   
   
@@ -38,10 +36,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/debug.js"></script>
@@ -101,7 +99,7 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">About ConWhAt</span></p>
+              <p><span class="caption-text">About ConWhAt</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html">Ontology &amp; Representation</a><ul>
@@ -111,7 +109,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/conwhat_atlases.html">ConWhAt Atlases</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<p><span class="caption-text">Getting Started</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#using-latest-github-master-source">Using latest github master source</a></li>
@@ -130,7 +128,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
+<p><span class="caption-text">Analyses of Brain Lesions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/eg03r__defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../auto_examples/eg03r__defining_a_synthetic_lesion.html#setup">Setup</a></li>
@@ -204,9 +202,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="installation">
+  <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="using-latest-github-master-source">
+<section id="using-latest-github-master-source">
 <h2>Using latest github master source<a class="headerlink" href="#using-latest-github-master-source" title="Permalink to this headline">¶</a></h2>
 <p>Clone latest version from github</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/JohnGriffiths/ConWhAt
@@ -218,12 +216,12 @@ $ python setup.py install
 </pre></div>
 </div>
 <p>Alternatively, simply add the cloned path to your <code class="code docutils literal notranslate"><span class="pre">pythonpath</span></code>.</p>
-</div>
-<div class="section" id="using-pypi">
+</section>
+<section id="using-pypi">
 <h2>Using pypi<a class="headerlink" href="#using-pypi" title="Permalink to this headline">¶</a></h2>
 <p><em>(coming soon)</em></p>
-</div>
-<div class="section" id="using-with-docker">
+</section>
+<section id="using-with-docker">
 <h2>Using with docker<a class="headerlink" href="#using-with-docker" title="Permalink to this headline">¶</a></h2>
 <p><em>(coming soon)</em></p>
 <ul class="simple">
@@ -239,8 +237,8 @@ $ python setup.py install
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker run -it -p 8888:8888 ConWhAt
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

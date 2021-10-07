@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Downloading atlases &mdash; ConWhAt 0.0.0 documentation</title>
@@ -13,18 +14,15 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
 
   
   
@@ -38,10 +36,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/debug.js"></script>
@@ -99,7 +97,7 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">About ConWhAt</span></p>
+              <p><span class="caption-text">About ConWhAt</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html">Ontology &amp; Representation</a><ul>
@@ -109,7 +107,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/conwhat_atlases.html">ConWhAt Atlases</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<p><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="installation.html#using-latest-github-master-source">Using latest github master source</a></li>
@@ -128,7 +126,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
+<p><span class="caption-text">Analyses of Brain Lesions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/eg03r__defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../auto_examples/eg03r__defining_a_synthetic_lesion.html#setup">Setup</a></li>
@@ -202,7 +200,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="downloading-atlases">
+  <section id="downloading-atlases">
 <h1>Downloading atlases<a class="headerlink" href="#downloading-atlases" title="Permalink to this headline">¶</a></h1>
 <p>In order to use ConWhAt you will need to download the atlases you want to use in your analyses.</p>
 <p>Be aware: some of these files are quite large!</p>
@@ -213,7 +211,7 @@
 <li><p>Use the links in the table below</p></li>
 <li><p>Use the provided data fetcher utilities (see below)</p></li>
 </ol>
-<div class="section" id="list-of-conwhat-atlases">
+<section id="list-of-conwhat-atlases">
 <h2>List of ConWhAt atlases<a class="headerlink" href="#list-of-conwhat-atlases" title="Permalink to this headline">¶</a></h2>
 <p>Here is a list of the currently and soon-to-be available ConWhAt atlases:</p>
 <table class="docutils align-default">
@@ -281,8 +279,8 @@ streamlinetric, 100subjects</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="downloading-using-the-data-fetcher-functions">
+</section>
+<section id="downloading-using-the-data-fetcher-functions">
 <h2>Downloading using the data fetcher functions<a class="headerlink" href="#downloading-using-the-data-fetcher-functions" title="Permalink to this headline">¶</a></h2>
 <p>Atlases can be downloaded directly from the NITRC repository
 using the <cite>fetcher</cite> utilities:</p>
@@ -292,15 +290,15 @@ using the <cite>fetcher</cite> utilities:</p>
                                    <span class="n">dataset_dir</span><span class="o">=</span><span class="s1">&#39;/tmp&#39;</span><span class="p">,</span><span class="n">remove_existing</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="note-on-streamlinetric-atlases">
+</section>
+<section id="note-on-streamlinetric-atlases">
 <h2>Note on streamlinetric atlases<a class="headerlink" href="#note-on-streamlinetric-atlases" title="Permalink to this headline">¶</a></h2>
 <p>Important note: the streamlinetric atlases all make use of a common streamlines file, which is quite large
 and only needs to be downloaded once. Currently that file lives in the L2k8 scale 33 atlas folder.
 You need to create symlinks to that file in all other streamlinetric atlas folders that use that
 streamlines file. Downloading using the data fetcher (recommended) will set up these hyperlinks for you.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

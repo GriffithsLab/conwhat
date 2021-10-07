@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Exploring the atlases &mdash; ConWhAt 0.0.0 documentation</title>
@@ -13,18 +14,15 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
 
   
   
@@ -38,10 +36,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/debug.js"></script>
@@ -99,7 +97,7 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">About ConWhAt</span></p>
+              <p><span class="caption-text">About ConWhAt</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html">Ontology &amp; Representation</a><ul>
@@ -109,7 +107,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/conwhat_atlases.html">ConWhAt Atlases</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<p><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="installation.html#using-latest-github-master-source">Using latest github master source</a></li>
@@ -128,7 +126,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
+<p><span class="caption-text">Analyses of Brain Lesions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/eg03r__defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../auto_examples/eg03r__defining_a_synthetic_lesion.html#setup">Setup</a></li>
@@ -202,7 +200,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="exploring-the-atlases">
+  <section id="exploring-the-atlases">
 <h1>Exploring the atlases<a class="headerlink" href="#exploring-the-atlases" title="Permalink to this headline">¶</a></h1>
 <p>There are four different atlas types in ConWhat, corresponding to the 2
 ontology types (Tract-based / Connectivity-Based) and 2 representation
@@ -284,7 +282,7 @@ connectome edge</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot_stat_map</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="figs/slice_view.png" src="figs/slice_view.png" />
+<img alt="getting_started/../figs/slice_view.png" src="getting_started/../figs/slice_view.png" />
 <p>Or alternatively as a 3D scatter plot, along with the x,y,z bounding box</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vca</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="mi">1637</span><span class="p">]</span>
 
@@ -304,7 +302,7 @@ connectome edge</p>
 <span class="go">getting atlas entry 1: image file /scratch/hpc3230/Data/conwhat_atlases/CWL2k8Sc33Vol3d100s_v01/vismap_grp_39-56_norm.nii.gz</span>
 </pre></div>
 </div>
-<img alt="figs/scatter_view.png" src="figs/scatter_view.png" />
+<img alt="getting_started/../figs/scatter_view.png" src="getting_started/../figs/scatter_view.png" />
 <p>We can also view the weights matrix like so:</p>
 <div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">vca</span><span class="o">.</span><span class="n">weights</span><span class="p">),</span><span class="n">xticklabels</span><span class="o">=</span><span class="n">vca</span><span class="o">.</span><span class="n">region_labels</span><span class="p">,</span>
@@ -312,7 +310,7 @@ connectome edge</p>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="figs/weights_matrix.png" src="figs/weights_matrix.png" />
+<img alt="getting_started/../figs/weights_matrix.png" src="getting_started/../figs/weights_matrix.png" />
 <p>The <code class="docutils literal notranslate"><span class="pre">vca</span></code> object also contains x,y,z bounding boxes for each structure</p>
 <p>We also stored additional useful information about the ROIs in the
 associated parcellation, including cortical/subcortical labels</p>
@@ -356,8 +354,8 @@ associated parcellation, including cortical/subcortical labels</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot_surf_roi</span><span class="p">([</span><span class="n">vtx</span><span class="p">,</span><span class="n">tri</span><span class="p">],</span><span class="n">vca</span><span class="o">.</span><span class="n">region_mapping_fsav_lh</span><span class="p">);</span>
 </pre></div>
 </div>
-<img alt="figs/rois_on_surf.png" src="figs/rois_on_surf.png" />
-</div>
+<img alt="getting_started/../figs/rois_on_surf.png" src="getting_started/../figs/rois_on_surf.png" />
+</section>
 
 
            </div>

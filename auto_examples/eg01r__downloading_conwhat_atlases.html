@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Downloading ConWhAt Atlases &mdash; ConWhAt 0.0.0 documentation</title>
@@ -13,18 +14,15 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
 
   
   
@@ -38,10 +36,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/debug.js"></script>
@@ -101,7 +99,7 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">About ConWhAt</span></p>
+              <p><span class="caption-text">About ConWhAt</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/ontology_and_representation.html">Ontology &amp; Representation</a><ul>
@@ -111,7 +109,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../about_conwhat/conwhat_atlases.html">ConWhAt Atlases</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<p><span class="caption-text">Getting Started</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-latest-github-master-source">Using latest github master source</a></li>
@@ -130,7 +128,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
+<p><span class="caption-text">Analyses of Brain Lesions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="eg03r__defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="eg03r__defining_a_synthetic_lesion.html#setup">Setup</a></li>
@@ -206,12 +204,11 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg01r-downloading-conwhat-atlases-py"><span class="std std-ref">here</span></a>
-to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg01r-downloading-conwhat-atlases-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="downloading-conwhat-atlases">
+<section class="sphx-glr-example-title" id="downloading-conwhat-atlases">
 <span id="sphx-glr-auto-examples-eg01r-downloading-conwhat-atlases-py"></span><h1>Downloading ConWhAt Atlases<a class="headerlink" href="#downloading-conwhat-atlases" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="setup">
+<section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the fetcher function</span>
 
@@ -228,12 +225,12 @@ to download the full example code</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/nethome/kcni/jgriffiths/.local/lib/python3.8/site-packages/nilearn/datasets/__init__.py:93: FutureWarning: Fetchers from the nilearn.datasets module will be updated in version 0.9 to return python strings instead of bytes and Pandas dataframes instead of Numpy arrays.
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nilearn/datasets/__init__.py:93: FutureWarning: Fetchers from the nilearn.datasets module will be updated in version 0.9 to return python strings instead of bytes and Pandas dataframes instead of Numpy arrays.
   warn(&quot;Fetchers from the nilearn.datasets module will be &quot;
 </pre></div>
 </div>
-</div>
-<div class="section" id="download-the-atlases-and-take-a-look">
+</section>
+<section id="download-the-atlases-and-take-a-look">
 <h2>Download the atlases and take a look<a class="headerlink" href="#download-the-atlases-and-take-a-look" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fetch_conwhat_atlas</span><span class="p">(</span><span class="n">atlas_name</span><span class="p">,</span><span class="n">atlas_dir</span><span class="p">,</span><span class="n">remove_existing</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
 
@@ -256,11 +253,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>removing existing folder
-
-
-duplicate file detected - removing...
-rm CWL2k8Sc33Vol3d100s_v01.zip
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>dataset dir not present. creating
 
 
 downloading data_file CWL2k8Sc33Vol3d100s_v01.zip...
@@ -276,7 +269,7 @@ finished unzipping.
 2445
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  51.671 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.970 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-eg01r-downloading-conwhat-atlases-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/32f67d4c9d364d839fcadde426de1164/eg01r__downloading_conwhat_atlases.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eg01r__downloading_conwhat_atlases.py</span></code></a></p>
@@ -286,8 +279,8 @@ finished unzipping.
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

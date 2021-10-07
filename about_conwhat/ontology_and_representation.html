@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Ontology &amp; Representation &mdash; ConWhAt 0.0.0 documentation</title>
@@ -13,18 +14,15 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
   <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
 
   
   
@@ -38,10 +36,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/debug.js"></script>
@@ -101,7 +99,7 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">About ConWhAt</span></p>
+              <p><span class="caption-text">About ConWhAt</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Ontology &amp; Representation</a><ul>
@@ -111,7 +109,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="conwhat_atlases.html">ConWhAt Atlases</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<p><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-latest-github-master-source">Using latest github master source</a></li>
@@ -130,7 +128,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
+<p><span class="caption-text">Analyses of Brain Lesions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/eg03r__defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../auto_examples/eg03r__defining_a_synthetic_lesion.html#setup">Setup</a></li>
@@ -204,10 +202,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ontology-representation">
+  <section id="ontology-representation">
 <h1>Ontology &amp; Representation<a class="headerlink" href="#ontology-representation" title="Permalink to this headline">¶</a></h1>
 <p>Classical and modern schemas for defining and characterizing neuroanatomical structures in white matter tissue can be categorized along two main dimensions <em>Ontology</em> and <em>Representation</em>. Each of these has two main flavours: tract-based/connectivity-based, and image-based/streamline-based.</p>
-<div class="section" id="ontology">
+<section id="ontology">
 <h2>Ontology<a class="headerlink" href="#ontology" title="Permalink to this headline">¶</a></h2>
 <p>Conventional approaches to atlasing white matter structures follow a <em>tract-based</em> ontology: they assign locations in stereotaxic space to a relatively small number of gross white matter tracts from the classical neuroanatomy literature.</p>
 <p>This has been an extremely successful program of research, particularly in relation to post-mortem dissections and MR image or tractography streamline segmentation methodologies, as it draws on some of the brain’s most salient and consistent macroscopic structural features.</p>
@@ -216,16 +214,16 @@
 <p>The benefit of this approach is that a scientist/clinician/citizen can take a set of (standard space) coordinates, or a nifti-format ROI mask such as a binary lesion map, and straightforwardly query which grey matter region pairs (i.e. connectome-edges) have fibers passing through those locations.</p>
 <p>That information can then be used together with the used parcellation’s <em>canonical connectome</em> (normative group-averaged connectivity matrix), to obtain a lesion-modified structural (macro) connectome. This can be done very quickly with zero tractography data or analysis required, and as little as a list of numbers (voxel coordinates) as input.</p>
 <p>An important point to emphasize is that the tract-based and connectivity-based ontologies are not diametrically opposed; in fact they should be regarded as highly complementary. This is why we have also included support in ConWhAt for standard tract-based atlas analyses.</p>
-</div>
-<div class="section" id="representation">
+</section>
+<section id="representation">
 <h2>Representation<a class="headerlink" href="#representation" title="Permalink to this headline">¶</a></h2>
 <p>Traditionally, anatomical atlases have (as the name suggests) existed as collections of more-or-less schematic two- or three-dimensional depictions, printed on the pages of a (generally quite large) book. Whilst this mode of representation is by no means uncommon, atlases in modern neuroimaging are generally understood to be digital data structures, which bear varying degrees of resemblance to their paper-based forebears.</p>
 <p>In particular, representations of white matter anatomical data in neuroimaging come in two flavours: <em>image-based</em> (which we refer to as <em>volumetric</em>), and (tractography) <em>streamline-based</em> (which we refer to neologistically as <em>streamlinetric</em>). These two forms of representation are very different beasts, each with its own set of distinctive features and pros/cons (which is why we make a major effort to support both in ConWhAt)</p>
 <p>For example: the basic units of volumetric representations are scalar-valued (voxel intensities), which when taken as a set can code for complex and rich encoding of 3D shapes in virtue of their arrangement on a regular 3D grid. In contrast, the basic units of streamlinetric representations are vector-valued; namely lists of coordinates in 3D space. Each individual streamline (unlike each individual voxel) therefore provides some holistic 3D shape information. The closest equivalent of voxel intensities for streamlines would be the presence of overlapping multiple streamlines; although this is much less compressed than scalar intensity values.</p>
 <p>The definition and interpretation of ‘damage’ also turns out to be somewhat different for volumetric vs. streamlinetric representations. In the volumetric case, damage (defined as e.g. proportional overlap with a lesion) is evaluated independently for every voxel. In the streamlinetric case, damage is instead evaluated independently for every streamline, with the important corollary that evaluations at different spatial locations are not independent of each other. In short, if an upstream part of a streamline is considered to be damaged, then downstream parts are also considered to be damaged, even if they themselves are nowhere near the damaged area. Which is, of course, how one would expect real damage to axons to operate. Streamlinetric quantifications of damage are somewhat more difficult to work with than their volumetric equivalents, however.</p>
 <p>There has been relatively little work done on direct comparisons of volumetric and streamlinetric characterizations of lesions, or indeed of white matter in general. ConWhAt is to our knowledge the first and only atlas-based tool that allows direct comparison between the two.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
