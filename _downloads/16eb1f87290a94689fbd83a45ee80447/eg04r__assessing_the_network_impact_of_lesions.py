@@ -132,7 +132,7 @@ parc_vals = np.unique(parc_dat)[1:]
 
 ccs = {parc_val: find_xyz_cut_coords(nib.Nifti1Image((parc_dat==parc_val).astype(int),parc_img.affine),
                                    activation_threshold=0) for parc_val in parc_vals}
-ccs_arr = np.array(ccs.values())
+ccs_arr = np.array(list(ccs.values()))
 
 # Now plotting on a glass brain:
 

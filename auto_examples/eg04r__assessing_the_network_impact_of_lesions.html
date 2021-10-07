@@ -51,7 +51,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Defining a synthetic lesion" href="eg03_defining_a_synthetic_lesion.html" /> 
+    <link rel="prev" title="Defining a synthetic lesion" href="eg03r__defining_a_synthetic_lesion.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -118,21 +118,21 @@
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-with-docker">Using with docker</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html">Downloading ConWhAt Atlases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html#setup">Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html#download-the-atlases-and-take-a-look">Download the atlases and take a look</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eg01r__downloading_conwhat_atlases.html">Downloading ConWhAt Atlases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg01r__downloading_conwhat_atlases.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg01r__downloading_conwhat_atlases.html#download-the-atlases-and-take-a-look">Download the atlases and take a look</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eg02_exploring_conwhat_atlases.html">Exploring the ConWhAt Atlases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eg02_exploring_conwhat_atlases.html#setup">Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eg02_exploring_conwhat_atlases.html#load-and-explore">Load and explore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eg02r__exploring_conwhat_atlases.html">Exploring the ConWhAt Atlases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg02r__exploring_conwhat_atlases.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg02r__exploring_conwhat_atlases.html#load-and-explore">Load and explore</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="eg03_defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eg03_defining_a_synthetic_lesion.html#setup">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eg03r__defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg03r__defining_a_synthetic_lesion.html#setup">Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Assessing the network impact of a lesion</a><ul>
@@ -205,11 +205,11 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg04-assessing-the-network-impact-of-lesions-py"><span class="std std-ref">here</span></a>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg04r-assessing-the-network-impact-of-lesions-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="assessing-the-network-impact-of-a-lesion">
-<span id="sphx-glr-auto-examples-eg04-assessing-the-network-impact-of-lesions-py"></span><h1>Assessing the network impact of a lesion<a class="headerlink" href="#assessing-the-network-impact-of-a-lesion" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-auto-examples-eg04r-assessing-the-network-impact-of-lesions-py"></span><h1>Assessing the network impact of a lesion<a class="headerlink" href="#assessing-the-network-impact-of-a-lesion" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -338,7 +338,7 @@ to download the full example code</p>
 
 <span class="n">ccs</span> <span class="o">=</span> <span class="p">{</span><span class="n">parc_val</span><span class="p">:</span> <span class="n">find_xyz_cut_coords</span><span class="p">(</span><span class="n">nib</span><span class="o">.</span><span class="n">Nifti1Image</span><span class="p">((</span><span class="n">parc_dat</span><span class="o">==</span><span class="n">parc_val</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">),</span><span class="n">parc_img</span><span class="o">.</span><span class="n">affine</span><span class="p">),</span>
                                    <span class="n">activation_threshold</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">parc_val</span> <span class="ow">in</span> <span class="n">parc_vals</span><span class="p">}</span>
-<span class="n">ccs_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ccs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">ccs_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">ccs</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
 
 <span class="c1"># Now plotting on a glass brain:</span>
 
@@ -348,13 +348,60 @@ to download the full example code</p>
                     <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span><span class="n">node_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">});</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-eg04-assessing-the-network-impact-of-lesions-py">
+<ul class="sphx-glr-horizontal">
+<li><img src="../_images/sphx_glr_eg04r__assessing_the_network_impact_of_lesions_001.png" srcset="../_images/sphx_glr_eg04r__assessing_the_network_impact_of_lesions_001.png" alt="eg04r  assessing the network impact of lesions" class = "sphx-glr-multi-img"/></li>
+<li><img src="../_images/sphx_glr_eg04r__assessing_the_network_impact_of_lesions_002.png" srcset="../_images/sphx_glr_eg04r__assessing_the_network_impact_of_lesions_002.png" alt="eg04r  assessing the network impact of lesions" class = "sphx-glr-multi-img"/></li>
+<li><img src="../_images/sphx_glr_eg04r__assessing_the_network_impact_of_lesions_003.png" srcset="../_images/sphx_glr_eg04r__assessing_the_network_impact_of_lesions_003.png" alt="eg04r  assessing the network impact of lesions" class = "sphx-glr-multi-img"/></li>
+<li><img src="../_images/sphx_glr_eg04r__assessing_the_network_impact_of_lesions_004.png" srcset="../_images/sphx_glr_eg04r__assessing_the_network_impact_of_lesions_004.png" alt="eg04r  assessing the network impact of lesions" class = "sphx-glr-multi-img"/></li>
+</ul>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>loading file mapping
+loading vol bbox
+loading connectivity
+computing hit stats for roi synthetic_lesion_20mm_sphere_-46_-60_6.nii.gz
+exception calling callback for &lt;Future at 0x7fe9529c2040 state=finished returned list&gt;
+Traceback (most recent call last):
+  File &quot;/opt/scc/conda/software/Python/3.8.5-Anaconda3-2021.03/lib/python3.8/site-packages/joblib/parallel.py&quot;, line 820, in dispatch_one_batch
+    tasks = self._ready_batches.get(block=False)
+  File &quot;/opt/scc/conda/software/Python/3.8.5-Anaconda3-2021.03/lib/python3.8/queue.py&quot;, line 167, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/opt/scc/conda/software/Python/3.8.5-Anaconda3-2021.03/lib/python3.8/site-packages/joblib/externals/loky/_base.py&quot;, line 625, in _invoke_callbacks
+    callback(self)
+  File &quot;/opt/scc/conda/software/Python/3.8.5-Anaconda3-2021.03/lib/python3.8/site-packages/joblib/parallel.py&quot;, line 359, in __call__
+    self.parallel.dispatch_next()
+  File &quot;/opt/scc/conda/software/Python/3.8.5-Anaconda3-2021.03/lib/python3.8/site-packages/joblib/parallel.py&quot;, line 792, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+  File &quot;/opt/scc/conda/software/Python/3.8.5-Anaconda3-2021.03/lib/python3.8/site-packages/joblib/parallel.py&quot;, line 831, in dispatch_one_batch
+    islice = list(itertools.islice(iterator, big_batch_size))
+  File &quot;/external/rprshnas01/netdata_kcni/jglab/MemberSpaces/jdg/Code/libraries_of_mine/github/conwhat/conwhat/utils/stats.py&quot;, line 54, in &lt;genexpr&gt;
+    (roi_dat,igzip4dnii(vfms.iloc[idx][&#39;nii_file&#39;],
+  File &quot;/external/rprshnas01/netdata_kcni/jglab/MemberSpaces/jdg/Code/libraries_of_mine/github/conwhat/conwhat/utils/readers.py&quot;, line 288, in igzip4dnii
+    dat = np.squeeze(image.dataobj[:,:,:])
+  File &quot;/nethome/kcni/jgriffiths/.local/lib/python3.8/site-packages/nibabel/arrayproxy.py&quot;, line 397, in __getitem__
+    return self._get_scaled(dtype=None, slicer=slicer)
+  File &quot;/nethome/kcni/jgriffiths/.local/lib/python3.8/site-packages/nibabel/arrayproxy.py&quot;, line 358, in _get_scaled
+    scaled = apply_read_scaling(self._get_unscaled(slicer=slicer), scl_slope, scl_inter)
+  File &quot;/nethome/kcni/jgriffiths/.local/lib/python3.8/site-packages/nibabel/arrayproxy.py&quot;, line 332, in _get_unscaled
+    return array_from_file(self._shape,
+  File &quot;/nethome/kcni/jgriffiths/.local/lib/python3.8/site-packages/nibabel/volumeutils.py&quot;, line 522, in array_from_file
+    n_read = infile.readinto(data_bytes)
+OSError: raw readinto() returned invalid length -4 (should have been between 0 and 27835904)
+
+&lt;nilearn.plotting.displays.OrthoProjector object at 0x7fe954e26f40&gt;
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 15 minutes  2.355 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-eg04r-assessing-the-network-impact-of-lesions-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../_downloads/42ad878ea71da40c31610c10cfd467e4/eg04_assessing_the_network_impact_of_lesions.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eg04_assessing_the_network_impact_of_lesions.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/16eb1f87290a94689fbd83a45ee80447/eg04r__assessing_the_network_impact_of_lesions.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eg04r__assessing_the_network_impact_of_lesions.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../_downloads/3b0a4760ff5926b91f13afbce9890a27/eg04_assessing_the_network_impact_of_lesions.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">eg04_assessing_the_network_impact_of_lesions.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/d36524b45596ea1cd9356814a8816076/eg04r__assessing_the_network_impact_of_lesions.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">eg04r__assessing_the_network_impact_of_lesions.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -370,7 +417,7 @@ to download the full example code</p>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="eg03_defining_a_synthetic_lesion.html" class="btn btn-neutral float-left" title="Defining a synthetic lesion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="eg03r__defining_a_synthetic_lesion.html" class="btn btn-neutral float-left" title="Defining a synthetic lesion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

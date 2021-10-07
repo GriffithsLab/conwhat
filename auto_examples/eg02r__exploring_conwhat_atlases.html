@@ -51,8 +51,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Defining a synthetic lesion" href="eg03_defining_a_synthetic_lesion.html" />
-    <link rel="prev" title="Downloading ConWhAt Atlases" href="eg01_downloading_conwhat_atlases.html" /> 
+    <link rel="next" title="Defining a synthetic lesion" href="eg03r__defining_a_synthetic_lesion.html" />
+    <link rel="prev" title="Downloading ConWhAt Atlases" href="eg01r__downloading_conwhat_atlases.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -119,9 +119,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#using-with-docker">Using with docker</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html">Downloading ConWhAt Atlases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html#setup">Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eg01_downloading_conwhat_atlases.html#download-the-atlases-and-take-a-look">Download the atlases and take a look</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eg01r__downloading_conwhat_atlases.html">Downloading ConWhAt Atlases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg01r__downloading_conwhat_atlases.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg01r__downloading_conwhat_atlases.html#download-the-atlases-and-take-a-look">Download the atlases and take a look</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Exploring the ConWhAt Atlases</a><ul>
@@ -132,13 +132,13 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="eg03_defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eg03_defining_a_synthetic_lesion.html#setup">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eg03r__defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg03r__defining_a_synthetic_lesion.html#setup">Setup</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eg04_assessing_the_network_impact_of_lesions.html">Assessing the network impact of a lesion</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eg04_assessing_the_network_impact_of_lesions.html#setup">Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eg04_assessing_the_network_impact_of_lesions.html#grab-lesion">Grab lesion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eg04r__assessing_the_network_impact_of_lesions.html">Assessing the network impact of a lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg04r__assessing_the_network_impact_of_lesions.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg04r__assessing_the_network_impact_of_lesions.html#grab-lesion">Grab lesion</a></li>
 </ul>
 </li>
 </ul>
@@ -206,11 +206,11 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg02-exploring-conwhat-atlases-py"><span class="std std-ref">here</span></a>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg02r-exploring-conwhat-atlases-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="exploring-the-conwhat-atlases">
-<span id="sphx-glr-auto-examples-eg02-exploring-conwhat-atlases-py"></span><h1>Exploring the ConWhAt Atlases<a class="headerlink" href="#exploring-the-conwhat-atlases" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-auto-examples-eg02r-exploring-conwhat-atlases-py"></span><h1>Exploring the ConWhAt Atlases<a class="headerlink" href="#exploring-the-conwhat-atlases" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># There are four different atlas types in ConWhat, corresponding to the 2 ontology types (Tract-based / Connectivity-Based) and 2 representation types (Volumetric / Streamlinetric).</span>
 <span class="c1">#</span>
 <span class="c1"># (More on this schema [here](http://conwhat.readthedocs.io/en/latest/about_conwhat/ontology_and_representation.html))</span>
@@ -318,13 +318,33 @@ to download the full example code</p>
 <span class="n">disp</span> <span class="o">=</span> <span class="n">plot_surf_roi</span><span class="p">([</span><span class="n">vtx</span><span class="p">,</span><span class="n">tri</span><span class="p">],</span><span class="n">vca</span><span class="o">.</span><span class="n">region_mapping_fsav_lh</span><span class="p">);</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-eg02-exploring-conwhat-atlases-py">
+<ul class="sphx-glr-horizontal">
+<li><img src="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_001.png" srcset="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_001.png" alt="eg02r  exploring conwhat atlases" class = "sphx-glr-multi-img"/></li>
+<li><img src="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_002.png" srcset="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_002.png" alt="eg02r  exploring conwhat atlases" class = "sphx-glr-multi-img"/></li>
+<li><img src="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_003.png" srcset="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_003.png" alt="eg02r  exploring conwhat atlases" class = "sphx-glr-multi-img"/></li>
+<li><img src="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_004.png" srcset="../_images/sphx_glr_eg02r__exploring_conwhat_atlases_004.png" alt="eg02r  exploring conwhat atlases" class = "sphx-glr-multi-img"/></li>
+</ul>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>loading file mapping
+loading vol bbox
+loading connectivity
+getting atlas entry 1637: image file conwhat_atlases/CWL2k8Sc33Vol3d100s_v01/vismap_grp_11-36_norm.nii.gz
+/nethome/kcni/jgriffiths/.local/lib/python3.8/site-packages/nilearn/plotting/img_plotting.py:341: FutureWarning: Default resolution of the MNI template will change from 2mm to 1mm in version 0.10.0
+  anat_img = load_mni152_template()
+getting atlas entry 1: image file conwhat_atlases/CWL2k8Sc33Vol3d100s_v01/vismap_grp_39-56_norm.nii.gz
+/external/rprshnas01/netdata_kcni/jglab/MemberSpaces/jdg/Code/libraries_of_mine/github/conwhat/conwhat/viz/volume.py:48: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
+  ax = fig.gca(projection=&#39;3d&#39;)
+/nethome/kcni/jgriffiths/.local/lib/python3.8/site-packages/numpy/lib/npyio.py:2407: VisibleDeprecationWarning: Reading unicode strings without specifying the encoding argument is deprecated. Set the encoding, use None for the system default.
+  output = genfromtxt(fname, **kwargs)
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  40.977 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-eg02r-exploring-conwhat-atlases-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../_downloads/f4d069b66af94148adc1129204be19e8/eg02_exploring_conwhat_atlases.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eg02_exploring_conwhat_atlases.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/85b681df62c4e207d0bc1ca4fa992b7a/eg02r__exploring_conwhat_atlases.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eg02r__exploring_conwhat_atlases.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../_downloads/e0a200ad8a5a0b9ac8e56958a67fcda6/eg02_exploring_conwhat_atlases.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">eg02_exploring_conwhat_atlases.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/4c8d118958ad95515def3f23955368c9/eg02r__exploring_conwhat_atlases.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">eg02r__exploring_conwhat_atlases.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -339,10 +359,10 @@ to download the full example code</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="eg03_defining_a_synthetic_lesion.html" class="btn btn-neutral float-right" title="Defining a synthetic lesion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="eg03r__defining_a_synthetic_lesion.html" class="btn btn-neutral float-right" title="Defining a synthetic lesion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="eg01_downloading_conwhat_atlases.html" class="btn btn-neutral float-left" title="Downloading ConWhAt Atlases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="eg01r__downloading_conwhat_atlases.html" class="btn btn-neutral float-left" title="Downloading ConWhAt Atlases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

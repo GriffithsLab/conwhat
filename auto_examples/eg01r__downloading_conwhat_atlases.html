@@ -51,7 +51,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Exploring the ConWhAt Atlases" href="eg02_exploring_conwhat_atlases.html" />
+    <link rel="next" title="Exploring the ConWhAt Atlases" href="eg02r__exploring_conwhat_atlases.html" />
     <link rel="prev" title="Installation" href="../getting_started/installation.html" /> 
 </head>
 
@@ -124,21 +124,21 @@
 <li class="toctree-l2"><a class="reference internal" href="#download-the-atlases-and-take-a-look">Download the atlases and take a look</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eg02_exploring_conwhat_atlases.html">Exploring the ConWhAt Atlases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eg02_exploring_conwhat_atlases.html#setup">Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eg02_exploring_conwhat_atlases.html#load-and-explore">Load and explore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eg02r__exploring_conwhat_atlases.html">Exploring the ConWhAt Atlases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg02r__exploring_conwhat_atlases.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg02r__exploring_conwhat_atlases.html#load-and-explore">Load and explore</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Analyses of Brain Lesions</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="eg03_defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eg03_defining_a_synthetic_lesion.html#setup">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eg03r__defining_a_synthetic_lesion.html">Defining a synthetic lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg03r__defining_a_synthetic_lesion.html#setup">Setup</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eg04_assessing_the_network_impact_of_lesions.html">Assessing the network impact of a lesion</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eg04_assessing_the_network_impact_of_lesions.html#setup">Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eg04_assessing_the_network_impact_of_lesions.html#grab-lesion">Grab lesion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eg04r__assessing_the_network_impact_of_lesions.html">Assessing the network impact of a lesion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eg04r__assessing_the_network_impact_of_lesions.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eg04r__assessing_the_network_impact_of_lesions.html#grab-lesion">Grab lesion</a></li>
 </ul>
 </li>
 </ul>
@@ -206,11 +206,11 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg01-downloading-conwhat-atlases-py"><span class="std std-ref">here</span></a>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-eg01r-downloading-conwhat-atlases-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="downloading-conwhat-atlases">
-<span id="sphx-glr-auto-examples-eg01-downloading-conwhat-atlases-py"></span><h1>Downloading ConWhAt Atlases<a class="headerlink" href="#downloading-conwhat-atlases" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-auto-examples-eg01r-downloading-conwhat-atlases-py"></span><h1>Downloading ConWhAt Atlases<a class="headerlink" href="#downloading-conwhat-atlases" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the fetcher function</span>
@@ -225,6 +225,11 @@ to download the full example code</p>
 <span class="c1"># Define which atlas to grab</span>
 
 <span class="n">atlas_name</span> <span class="o">=</span> <span class="s1">&#39;CWL2k8Sc33Vol3d100s_v01&#39;</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/nethome/kcni/jgriffiths/.local/lib/python3.8/site-packages/nilearn/datasets/__init__.py:93: FutureWarning: Fetchers from the nilearn.datasets module will be updated in version 0.9 to return python strings instead of bytes and Pandas dataframes instead of Numpy arrays.
+  warn(&quot;Fetchers from the nilearn.datasets module will be &quot;
 </pre></div>
 </div>
 </div>
@@ -250,13 +255,34 @@ to download the full example code</p>
 <span class="nb">len</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">/</span><span class="si">%s</span><span class="s1">/*.nii.gz&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">atlas_dir</span><span class="p">,</span><span class="n">atlas_name</span><span class="p">)))</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-eg01-downloading-conwhat-atlases-py">
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>removing existing folder
+
+
+duplicate file detected - removing...
+rm CWL2k8Sc33Vol3d100s_v01.zip
+
+
+downloading data_file CWL2k8Sc33Vol3d100s_v01.zip...
+wget https://www.nitrc.org/frs/download.php/10381/CWL2k8Sc33Vol3d100s_v01.zip --no-check-certificate
+
+
+unzipping file...
+unzip CWL2k8Sc33Vol3d100s_v01.zip
+
+
+finished unzipping.
+
+2445
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  51.671 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-eg01r-downloading-conwhat-atlases-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../_downloads/d871516fe9c015be07f5aefa18b93fdd/eg01_downloading_conwhat_atlases.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eg01_downloading_conwhat_atlases.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/32f67d4c9d364d839fcadde426de1164/eg01r__downloading_conwhat_atlases.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eg01r__downloading_conwhat_atlases.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../_downloads/1a97b22e81fa803bd5894f88b8daf1c6/eg01_downloading_conwhat_atlases.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">eg01_downloading_conwhat_atlases.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/c1cbfa0139a78f5e3ff5bdbf9a988f92/eg01r__downloading_conwhat_atlases.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">eg01r__downloading_conwhat_atlases.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -271,7 +297,7 @@ to download the full example code</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="eg02_exploring_conwhat_atlases.html" class="btn btn-neutral float-right" title="Exploring the ConWhAt Atlases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="eg02r__exploring_conwhat_atlases.html" class="btn btn-neutral float-right" title="Exploring the ConWhAt Atlases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../getting_started/installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
